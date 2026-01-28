@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import ProgressLog from './ProgressLog';
 import SceneCard from './SceneCard';
-// --- FFmpeg Removed (Rollback) ---
 
 interface Scene {
     script: string;
@@ -231,14 +230,6 @@ export default function GeneratorInterface() {
                             });
                             addLog(`المشهد ${i + 1}: الصوت جاهز ✅`, 'success');
 
-                            // Restoration: Update Cache
-                            setProduction(current => {
-                                if (current) {
-                                    const updated = { ...current };
-                                    localStorage.setItem(cacheKey, JSON.stringify(updated));
-                                }
-                                return current;
-                            });
                         } else {
                             updateScene({ audioReady: true });
                         }
@@ -650,7 +641,7 @@ export default function GeneratorInterface() {
                             />
                         )}
                         <Download size={18} className={cn(isRecording && "animate-bounce")} />
-                        {isRecording ? `جاري التصدير ${Math.floor(renderProgress)}%` : "تصدير الفيديو الذهبي"}
+                        {isRecording ? `جاري التصدير ${Math.floor(renderProgress)}%` : "تحميل الروابط (أرشيف)"}
                     </button>
                 </div>
             </div>
