@@ -70,6 +70,18 @@ export default function SceneCard({ index, scene, isActive, onClick }: SceneCard
                         {scene.mood}
                     </span>
                 </div>
+
+                {/* ⚡️ Speed-Demon: Status Indicators */}
+                <div className="flex gap-3 pt-2 border-t border-white/5 mt-2">
+                    <div className="flex items-center gap-1.5">
+                        <div className={`w-1.5 h-1.5 rounded-full ${scene.visualReady || scene.imageUrl || scene.videoUrl ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]' : 'bg-yellow-500 animate-pulse'}`} />
+                        <span className="text-[10px] text-zinc-500">البصريات</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                        <div className={`w-1.5 h-1.5 rounded-full ${scene.audioReady || scene.audioUrl ? 'bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]' : 'bg-yellow-500 animate-pulse'}`} />
+                        <span className="text-[10px] text-zinc-500">الصوت</span>
+                    </div>
+                </div>
             </div>
 
             {/* Active Indicator */}

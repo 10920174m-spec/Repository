@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* تم إزالة قيود الـ CORP لتسريع التحميل على الموبايل */
 };
 
 export default nextConfig;

@@ -170,7 +170,7 @@ export default function LockScreen() {
       <div className="min-h-screen bg-[#050505]" dir="rtl">
         <header className="fixed top-0 w-full h-24 px-8 bg-black/60 backdrop-blur-2xl border-b border-white/5 flex justify-between items-center z-50 shadow-2xl">
           <div className="flex items-center gap-6">
-            <h1 className="text-3xl font-black gold-gradient tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] min-w-[200px]">AI Automation Studio</h1>
+            <h1 className="text-3xl font-black gold-gradient tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)] min-w-[200px]">AI Automation Studio <span className="text-sm block text-yellow-500/80">مدى الحياة</span></h1>
             <div className="hidden md:flex px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-[10px] font-bold text-yellow-500 uppercase tracking-[0.2em] shadow-[0_0_10px_rgba(234,179,8,0.2)]">
               Master Access
             </div>
